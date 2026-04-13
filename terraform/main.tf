@@ -46,9 +46,18 @@ resource "azurerm_container_app" "app" {
       image  = "mcr.microsoft.com/k8se/quickstart:latest"
       cpu    = 0.5
       memory = "1Gi"
-      env { name = "NODE_ENV"; value = "production" }
-      env { name = "PORT"; value = "3000" }
-      env { name = "HOSTNAME"; value = "0.0.0.0" }
+      env {
+        name  = "NODE_ENV"
+        value = "production"
+      }
+      env {
+        name  = "PORT"
+        value = "3000"
+      }
+      env {
+        name  = "HOSTNAME"
+        value = "0.0.0.0"
+      }
     }
   }
 
